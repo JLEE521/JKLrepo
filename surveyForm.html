@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="css/survey.css">
+  </head>
+  <body>
+    <h1>Survey</h1>
+    <form
+      class="survey-form"
+      action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata"
+      method="post"
+    >
+      <fieldset>
+        <legend>Information</legend>
+        <div>
+          <label for="FirstName">First Name:</label>
+          <input
+            type="text"
+            id="FirstName"
+            name="firstname"
+            placeholder="Your first name"
+          />
+        </div>
+        <div>
+          <label for="LastName">Last Name:</label>
+          <input
+            type="text"
+            id="LastName"
+            name="lastname"
+            placeholder="Your last name"
+          />
+        </div>
+        <div>
+          <label for="Email"> Your Email:</label>
+          <input
+            type="email"
+            id="Email"
+            name="email"
+            placeholder="example.email@survey.com"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Survey Questions</legend>
+        <div>
+          Favorite Sport:
+          <input type="radio" id="baseball" name="sport" value="baseball" />
+          <label for="baseball">Baseball</label>
+          <input type="radio" id="rugby" name="sport" value="rugby" />
+          <label for="rugby">Rugby</label>
+          <input
+            type="radio"
+            id="snowboarding"
+            name="sport"
+            value="snowboarding"
+          />
+          <label for="snowboarding">Snowboarding</label>
+        </div>
+        <div>
+          Your pets:
+          <input type="checkbox" id="cat" name="pets" value="cat" />
+          <label for="cat">Cat</label>
+          <input type="checkbox" id="dog" name="pets" value="dog" />
+          <label for="dog">Dog</label>
+          <input type="checkbox" id="fish" name="pets" value="fish" />
+          <label for="fish">Fish</label>
+        </div>
+      </fieldset>
+      <input type="submit" id="submit-btn" />
+    </form>
+  </body>
+</html>
